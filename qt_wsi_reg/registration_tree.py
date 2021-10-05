@@ -658,6 +658,12 @@ class RegistrationQuadTree:
         elif point_extractor == "sift":
             detector = cv2.SIFT_create() # maxFeatures
             norm = cv2.NORM_L2
+        elif point_extractor == "kaze":
+            detector = cv2.KAZE_create()
+            norm = cv2.NORM_L2
+        elif point_extractor == "brisk":
+            detector = cv2.BRISK_create()
+            norm = cv2.NORM_HAMMING
         else:
             return None, None
         
